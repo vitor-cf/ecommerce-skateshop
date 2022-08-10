@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+} 
+body {
+    font-family: 'Oswald', sans-serif;
+}
+/* Contém info local/email ... */
+.box-info {
+    background-color: rgb(18, 17, 48);
+    height: 7vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} 
+.list-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    color: white;
+} 
+.item-list-info {
+    font-size: 12px;
+    margin-left: 30px;
+} 
+.nome-logo {
+    color: rgb(73, 71, 190);
+    font-size: 40px;
+    font-weight: 1000;
+}
+strong{
+    color: white;
+}
+/* logo/ input para buscar produto/ carrinho */ 
+
+.box-logo {
+    height: 20vh;
+    background-color: rgb(24, 23, 80);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.815);
+}  
+.box-input {
+    display: flex;
+}
+input {
+    padding: 15px; 
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; 
+
+} 
+input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+.btn-buscar {
+    padding: 15px; 
+    border: none; 
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(59, 58, 131);
+    font-weight: 600;
+    color: white;
+}
+.btn-buscar:hover {
+    cursor: pointer;
+}
+/* Produtos-menu */
+.box-produtos {
+    background-color: whitesmoke;
+    border-bottom: 2px solid rgba(173, 172, 172, 0.4);
+}
+.list-produtos {
+    height: 10vh;
+    display: flex;
+    list-style: none;
+    margin-left: 17vh;
+    align-items: center;
+} 
+    
+    
+.item-list-produtos {
+    color: rgb(51, 51, 51);
+    margin-left: 50px;
+} 
+.item-list-produtos:hover {
+    cursor: pointer;
+    color: rgb(24, 23, 80);
+    border-bottom: 2px solid rgba(24, 23, 80,0.7);
+    
+}
+    
+
+/* Imagens propaganda */
+
+.box-imagem {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+} 
+.propaganda {
+    width: 30%;
+}  
+
+/* Produtos blocos */
+.nome-produtos {
+    margin-top: 15vh;
+    margin-left: 10vh;
+}
+.caixa-produtos {
+    margin-top: 10vh;
+    display: flex; 
+    justify-content: space-evenly;
+}
+.img-produto {
+    width: 80%;
+}
+.item-caixa-produtos{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    margin-bottom: 10px;
+    border: 1px solid rgba(182, 182, 182,0.5);
+} 
+.item-caixa-produtos:hover {
+    cursor: pointer;
+    border: 1px solid rgba(24, 23, 80,0.7);
+    transition-duration: 0.2s;
+}
+/* spans */
+.span-categoria {
+    font-weight: 400;
+    color: rgb(110, 109, 109);
+}
+.span-info {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+.span-preco {
+    font-weight: 600;
+    color: rgb(24, 23, 80);
+}
+.btn-addcart {
+    margin-top: 10px;
+    padding: 15px 37.2%;
+    background-color: black;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-weight: 1000;
+}
+.btn-addcart:hover {
+    cursor: pointer;
+    background-color: rgb(41, 41, 41);
+    transition-duration: 0.7s;
+}
+    
+    
+    
+
+
