@@ -158,7 +158,29 @@ input:focus{
     cursor: pointer;
     background-color: rgb(41, 41, 41);
     transition-duration: 0.7s;
+} 
+
+/* carrinho aumentar valor */
+
+.carrinho-model {
+    background-color: rgb(32, 34, 98);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+} 
+.box-bolha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    margin-left: 10px;
+}  
+.num {
+    color: white;
 }
+    
+
+    
     
     
     

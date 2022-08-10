@@ -34,8 +34,13 @@
                     <input type="text" placeholder="Busca">
                     <button class="btn-buscar">Buscar</button>
                 </div>
+                <div class="carrinho-model">
+                    <img src="img/carrinho-white.png" alt="" class="icon-carrinho"> 
+                    <div class="box-bolha">
+                        <span class="num" id="num">0</span>
+                    </div>
+                </div>
                 
-                <img src="img/carrinho-white.png" alt="" class="icon-carrinho">
             </div> 
             
             <div class="box-produtos">
@@ -61,41 +66,64 @@
         </div>
     </section> 
 
-    <!-- SHAPE -->
+    <!-- SHAPE LIST -->
     <main>
-        <h1 class="nome-produtos">SHAPES</h1> 
-        <div class="caixa-produtos">
-            <div class="item-caixa-produtos">
+          <h1 class="nome-produtos">SHAPES</h1> 
+         <div class="caixa-produtos"> 
+            
+             <div class="item-caixa-produtos">
                 <img src="img/shape-element.jpg" alt="" class="img-produto">
                 <span class="span-categoria">SHAPE</span> 
                 <span class="span-info">Element Shape Skate Third Eye Schaar 8.5"</span>
-                <span class="span-preco">$250.00</span> 
-                <button class="btn-addcart">Adicionar</button>
-            </div>
-            <div class="item-caixa-produtos">
+                <span class="span-preco">R$ 250.00</span> 
+                <button class="btn-addcart" id="btn-add">Adicionar</button>
+            </div> 
+             <div class="item-caixa-produtos">
                 <img src="img/shape-element-seal.jpg" alt="" class="img-produto">
                 <span class="span-categoria">SHAPE</span> 
                 <span class="span-info">Element Shape Skate Seal 8"</span>
-                <span class="span-preco">$250.00</span>  
+                <span class="span-preco">$ 250.00</span>  
                 <button class="btn-addcart">Adicionar</button>
             </div>
             <div class="item-caixa-produtos">
                 <img src="img/shape-junkies.jpg" alt="" class="img-produto">
                 <span class="span-categoria">SHAPE</span> 
                 <span class="span-info">Toy Machine Shape Skate Collins Reaper 8.25"</span>
-                <span class="span-preco">$250.00</span> 
+                <span class="span-preco">$ 250.00</span> 
                 <button class="btn-addcart">Adicionar</button>
             </div>
             <div class="item-caixa-produtos">
                 <img src="img/shape-monster.jpg" alt="" class="img-produto">
                 <span class="span-categoria">SHAPE</span> 
                 <span class="span-info">Shape Hell Monster 8.25"</span>
-                <span class="span-preco">$250.00</span> 
+                <span class="span-preco">$ 250.00</span> 
                 <button class="btn-addcart">Adicionar</button>
+            </div> 
+        </div>  
+
+        <!-- COMPLETAR IMAGENS USANDO O JS --> 
+
+        <!-- <div class="models">
+            <div class="shape-item">
+                <a href="">
+                    <div class="shape-item--img"><img src="" alt=""></div>
+                </a> 
+                <div class="shape-item--categoria">--</div>
+                <div class="shape-item--name">--</div>
+                <div class="shape-item-price">R$ --</div>
             </div>
-        </div> 
+
+        </div> -->
 
         
-    </main>
+    </main>  
+    
+    <!-- conteudo principal  -->
+
+    <h2>Shapes</h2>
+
+    <div class="shape-area"></div>
+    <script src="assets/models.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 </html>
