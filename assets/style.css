@@ -112,8 +112,9 @@ input:focus{
 }
 .caixa-produtos {
     margin-top: 10vh;
-    display: flex; 
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
 }
 .img-produto {
     width: 80%;
@@ -178,7 +179,23 @@ input:focus{
 .num {
     color: white;
 }
-    
+/*  modal carrinho  */
+
+#modal-carrinho {
+    position: fixed;
+    background-color: rgba(223, 222, 222, 0.7);
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 80vh;
+    display: none;
+} 
+.nome-carrinho-modal {
+    text-align: center;
+    margin-top: 5vh;
+} 
+
+
 
     
     
