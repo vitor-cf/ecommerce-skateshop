@@ -1,71 +1,40 @@
 const shapeItems = [
     {
-        id: 1,
+        id: 0,
         categoria: 'SHAPE',
-        name: 'Element Shape Skate Third Eye Schaar 8.5"',
+        name: 'Third Eye Schaar 8.5"',
         img: 'img/shape-element.jpg',
-        price: '250,00',
+        price: 259.99,
         quantidade: 0
     },
     
     {
-        id: 2,
+        id: 1,
         categoria: 'SHAPE',
         name: 'Element Shape Skate Seal 8"',
         img: 'img/shape-element-seal.jpg',
-        price: '250,00',
+        price: 259.99,
+        quantidade: 0
+    },
+
+    {
+        id: 2,
+        categoria: 'SHAPE',
+        name: 'Collins Reaper 8.25"',
+        img: 'img/shape-junkies.jpg',
+        price: 259.99, 
         quantidade: 0
     },
 
     {
         id: 3,
         categoria: 'SHAPE',
-        name: 'Toy Machine Shape Skate Collins Reaper 8.25"',
-        img: 'img/shape-junkies.jpg',
-        price: '250,00', 
+        name: 'Shape Hell Monster 8.25"',
+        img: 'img/shape-monster.jpg',
+        price: 259.99, 
         quantidade: 0
     },
-
-    {
-        id: 4,
-        categoria: 'SHAPE',
-        name: 'Shape Hell Monster 8.25"',
-        img: 'img/shape-monster.jpg',
-        price: '250,00', 
-        quantidade: 0
-    },
-    {
-        id: 5,
-        categoria: 'SHAPE',
-        name: 'Shape Hell Monster 8.25"',
-        img: 'img/shape-monster.jpg',
-        price: '250,00', 
-        quantidade: 0
-    }, 
-    {
-        id: 6,
-        categoria: 'SHAPE',
-        name: 'Shape Hell Monster 8.25"',
-        img: 'img/shape-monster.jpg',
-        price: '250,00', 
-        quantidade: 0
-    },
-    {
-        id: 7,
-        categoria: 'SHAPE',
-        name: 'Shape Hell Monster 8.25"',
-        img: 'img/shape-monster.jpg',
-        price: '250,00',
-        quantidade: 0
-    }, 
-    {
-        id: 8,
-        categoria: 'SHAPE',
-        name: 'Shape Hell Monster 8.25"',
-        img: 'img/shape-monster.jpg',
-        price: '250,00',
-        quantidade: 0
-    }
+    
 
 ]
 
@@ -92,7 +61,8 @@ inicializarLista = () => {
 inicializarLista(); 
 
 /* Função atualizar carrinho */
-atualizarCarrinho = () => {
+atualizarCarrinho = (product) => {
+    console.log('teste:', product)
     var containerCarrinho = document.getElementById('carrinho');
     containerCarrinho.innerHTML = ""; 
     let modalCarrinho = document.getElementById('modal-carrinho');
@@ -101,9 +71,13 @@ atualizarCarrinho = () => {
         if(val.quantidade > 0 ) {
             modalCarrinho.style.display = 'block';
             containerCarrinho.innerHTML += `
-            <br>
-            <p>`+val.name+` | quantidade: `+val.quantidade+`</p>
-            <br>
+            <div class="carrinho-style">
+            <img src="`+val.img+`" alt=""> 
+            <span class="span-info">`+val.name+`</span>
+            <span class="span-preco">R$ `+val.price+`</span>
+            <button class="btn-close-item">x</button>
+            </div>
+            
             `
         }
     })
@@ -120,4 +94,18 @@ for(var i = 0; i < links.length; i++) {
         return false;
         
     })
-}
+} 
+
+
+// function fechar modal 
+
+closeModal = () => {
+    let modalCarrinho = document.getElementById('modal-carrinho'); 
+
+    modalCarrinho.style.display = 'none';
+    
+    
+} 
+
+let btnClose = document.getElementById('btn-close');
+btnClose.addEventListener('click', closeModal)
