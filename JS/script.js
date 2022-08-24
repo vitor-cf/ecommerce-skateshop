@@ -49,7 +49,8 @@ inicializarLista = () => {
                 <span class="span-categoria">`+val.categoria+`</span> 
                 <span class="span-info">`+val.name+`</span>
                 <span class="span-preco">`+val.price+`</span> 
-                <a key="`+val.id+`" ><button class="btn-addcart" id="btn-add">Adicionar</button></a>
+                
+                <a key="`+val.id+`" ><button class="btn-addcart">Adicionar</button></a>
             </div> 
              
         
@@ -61,8 +62,8 @@ inicializarLista = () => {
 inicializarLista(); 
 
 /* Função atualizar carrinho */
-atualizarCarrinho = (product) => {
-    console.log('teste:', product)
+atualizarCarrinho = () => {
+    
     var containerCarrinho = document.getElementById('carrinho');
     containerCarrinho.innerHTML = ""; 
     let modalCarrinho = document.getElementById('modal-carrinho');
@@ -73,28 +74,69 @@ atualizarCarrinho = (product) => {
             containerCarrinho.innerHTML += `
             <div class="carrinho-style">
             <img src="`+val.img+`" alt=""> 
+            <div class="price-name-column">
             <span class="span-info">`+val.name+`</span>
-            <span class="span-preco">R$ `+val.price+`</span>
-            <button class="btn-close-item">x</button>
             </div>
             
-            `
+            
+            <div class="price-box">
+            <p>Preço</p>
+            <p class="price-style" >`+val.price+`</p>
+            </div>
+            </div>
+            
+            
+            ` 
+        
         }
     })
-}
+} 
+
+// BOTAO FECHAR PEDIDO
+// var quantItem = 1;
+
+// function mudarQuantidade () {
+//      let spaceQuant = document.getElementById('qnt-box-item');
+//      quantItem++
+//      spaceQuant.innerHTML = quantItem 
+    
 
 
-var links = document.getElementsByTagName('a');
+// } 
+
+//  function btnRemove () {
+//      let spaceQuant = document.getElementById('qnt-box-item');
+//      if (quantItem > 1) {
+//         quantItem--
+//          spaceQuant.innerHTML = quantItem
+//      }
+    
+//  }
+
+// const btnAdd = document.getElementById('btn-add-item');
+// btnAdd.addEventListener('click', mudarQuantidade); 
+
+//  const btnTeste = document.getElementById('btn-remove-item');
+//  btnTeste.addEventListener('click', btnRemove)
+
+// Ao clicar em Adicionar adiciona o item no carrinho
+var links = document.querySelectorAll('a');
+var btnUm = document.getElementsByTagName('button');
 
 for(var i = 0; i < links.length; i++) {
+    
     links[i].addEventListener("click", function () {
         let key = this.getAttribute('key');
         shapeItems[key].quantidade++;
         atualizarCarrinho();
         return false;
-        
+       
     })
 } 
+
+
+
+// Botoes no modal Add e remove
 
 
 // function fechar modal 
