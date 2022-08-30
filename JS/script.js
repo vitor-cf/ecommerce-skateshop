@@ -1,7 +1,7 @@
 const shapeItems = [
     {
         id: 0,
-        categoria: 'SHAPE',
+        categoria: 'Shape',
         name: 'Third Eye Schaar 8.5"',
         img: 'img/shape-element.jpg',
         price: 259.99,
@@ -10,7 +10,7 @@ const shapeItems = [
     
     {
         id: 1,
-        categoria: 'SHAPE',
+        categoria: 'Shape',
         name: 'Element Shape Skate Seal 8"',
         img: 'img/shape-element-seal.jpg',
         price: 259.99,
@@ -19,7 +19,7 @@ const shapeItems = [
 
     {
         id: 2,
-        categoria: 'SHAPE',
+        categoria: 'Shape',
         name: 'Collins Reaper 8.25"',
         img: 'img/shape-junkies.jpg',
         price: 259.99, 
@@ -28,12 +28,44 @@ const shapeItems = [
 
     {
         id: 3,
-        categoria: 'SHAPE',
+        categoria: 'Shape',
         name: 'Shape Hell Monster 8.25"',
         img: 'img/shape-monster.jpg',
         price: 259.99, 
         quantidade: 0
     },
+    {
+        id: 4,
+        categoria: 'Shape',
+        name: 'Girl Mike Mo 93 8.25"',
+        img: 'img/shape-girl.jpg',
+        price: 259.99, 
+        quantidade: 0
+    },
+    {
+        id: 4,
+        categoria: 'Shape',
+        name: 'Girl Mike Mo 93 8.25"',
+        img: 'img/shape-girl.jpg',
+        price: 259.99, 
+        quantidade: 0
+    },
+    {
+        id: 4,
+        categoria: 'Shape',
+        name: 'Girl Mike Mo 93 8.25"',
+        img: 'img/shape-girl.jpg',
+        price: 259.99, 
+        quantidade: 0
+    },
+    {
+        id: 4,
+        categoria: 'Shape',
+        name: 'Girl Mike Mo 93 8.25"',
+        img: 'img/shape-girl.jpg',
+        price: 259.99, 
+        quantidade: 0
+    }
     
 
 ]
@@ -48,7 +80,7 @@ inicializarLista = () => {
                 <img src="`+val.img+`" alt="" class="img-produto">
                 <span class="span-categoria">`+val.categoria+`</span> 
                 <span class="span-info">`+val.name+`</span>
-                <span class="span-preco">`+val.price+`</span> 
+                <span class="span-preco">R$ `+val.price+`</span> 
                 
                 <a key="`+val.id+`" ><button class="btn-addcart">Adicionar</button></a>
             </div> 
